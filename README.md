@@ -20,9 +20,6 @@ Ako razvijate i pokrećete mmseg direktno, MMSegmentation instalirajte sa ovog i
 git clone -b main https://github.com/open-mmlab/mmsegmentation.git
 cd mmsegmentation
 pip install -v -e .
-# '-v' means verbose, or more output
-# '-e' means installing a project in editable mode,
-# thus any local modifications made to the code will take effect without reinstallation.
 ```
 
 Ako koristite mmsegmentation kao dependency ili uključujete kao paket, MMSegmentation instalirajte pomoću pip-a:
@@ -32,9 +29,10 @@ pip install "mmsegmentation>=1.0.0"
 
 
 
-### Priprema podataka
+## Priprema podataka
 
 **Struktura**
+
 Direktorij s podacima postavite u `$MMSEGMENTATION/data` tako da je Vaš mmsegmentation direktorij građen ovako:
 
 ```none
@@ -121,7 +119,7 @@ python tools/dataset_converters/synapse.py --dataset-path /putanja/do/synapse
 
 ```
 
-### Učenje
+## Učenje
 
 Kako biste pokrenuli učenje modela pokrenite slijedeći kod:
 
@@ -130,7 +128,7 @@ python tools/train.py  ${KONFIGURACIJSKA_DATOTEKA}
 ```
 Za vrijeme učenja u direktoriju mmsegmentation/work_dirs stvorit će se direktorij sa datotekama sa naučenim težinama(datoteke koje završavaju sa .pth), python konfiguracijska datoteka, zadnja spremljena točka i dodatni direktorij sa izmjerenim gubitcima i metrikama u obliku JSON datoteke.
 
-### Validacija
+## Validacija
 
 Kako biste validirali naučeni model pokrenite slijedeći kod:
 
@@ -138,7 +136,7 @@ Kako biste validirali naučeni model pokrenite slijedeći kod:
 python tools/test.py ${KONFIGURACIJSKA_DATOTEKA} ${CHECKPOINT_DATOTEKA.pth} 
 ```
 
-### Konfiguracijska datoteka
+## Konfiguracijska datoteka
 
 **20000 iteracija, nasumično incijalizirane težine**
 
@@ -166,7 +164,7 @@ Težine za inicijalizaciju SegFormer-B0 dobivene treniranjem na ImageNetu od str
 
 Za validaciju SegFormera na Cityscapes skupu koji je prethodno treniran od strane [autora](https://arxiv.org/abs/2105.15203) modela preuzeti težine dobivene nakon učenja [odavde](https://download.openmmlab.com/mmsegmentation/v0.5/segformer/segformer_mit-b0_8x1_1024x1024_160k_cityscapes/segformer_mit-b0_8x1_1024x1024_160k_cityscapes_20211208_101857-e7f88502.pth) i pokrenuti validaciju kao što je opisano iznad.
 
-### Pregled rezultata
+## Pregled rezultata
 
 **Vizualizacija maske predviđanja i stvarne maske**
 
