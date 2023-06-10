@@ -7,9 +7,7 @@ crop_size = (512, 512)
 data_preprocessor = dict(size=crop_size)
 model = dict(
     data_preprocessor=data_preprocessor,
-    backbone=dict(
-        init_cfg=dict(type='Pretrained', checkpoint='pretrain/mit_b0.pth')
-        ),
+    backbone=dict(),
     test_cfg=dict(mode='slide', crop_size=(512, 512), stride=(168, 168)))
 
 optim_wrapper = dict(
