@@ -158,7 +158,7 @@ Pripremljenu konfiguracijsku datoteku za učenje SegFormera na Synapse skupu pre
 
 ### Težine za inicijalizaciju
 
-Težine za inicijalizaciju SegFormer-B0 dobivene treniranjem na ImageNetu od strane [autora](https://arxiv.org/abs/2105.15203) modela  mogu se preuzeti korištene u službenom [repozitoriju](https://github.com/NVlabs/SegFormer) mogu se preuzeti [odavde](https://drive.google.com/drive/folders/1b7bwrInTW4VLEm27YawHOAMSMikga2Ia). Kako biste mogli koristiti te težine potrebno je u mmsegmentation stvoriti direktorij pretrain i u njega dodati preuzetu datoteku.
+Težine za inicijalizaciju SegFormer-B0 dobivene treniranjem na ImageNetu od strane [autora](https://arxiv.org/abs/2105.15203) modela korištene u službenom [repozitoriju](https://github.com/NVlabs/SegFormer) mogu se preuzeti [odavde](https://drive.google.com/drive/folders/1b7bwrInTW4VLEm27YawHOAMSMikga2Ia). Kako biste mogli koristiti te težine potrebno je u mmsegmentation stvoriti direktorij pretrain i u njega dodati preuzetu datoteku.
 
 ### Validacija SegFormera na Cityscapes
 
@@ -200,3 +200,4 @@ Za mjerenje brzine obrade ulaznih podataka u fps(broj slika / sekunda) pokrenuti
 python tools/benchmark.py ${PUTANJA_DO_KONFIGURACIJSKE_DATOTEKE} ${PUTANJA_DO_TEZINA_MODELA_NAKON_UCENJA}
 
 ```
+
